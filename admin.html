@@ -42,12 +42,41 @@
 
                         <input type="text" id="drivername" placeholder="Driver Name">DRIVER NAME
                         <input type="checkbox" id="availalble">
-                        
-
-               
+                    <button id="fleetbtn" onclick="addFleet()"> Add fleet</button>
             </aside>
-
         </div>
+
+        <main class="main-container">
+            <div class="controls">
+                <div>
+                   <select id="filterCategory">FILTER
+                        <option value="auto">AUTO</option>
+                        <option value="car">CAR</option>
+                        <option value="Bus">BUS</option>
+                        <option value="Truck">TRUCK</option>
+                 </select>
+                </div>
+
+
+                <div>
+                    <button id="sortAZ" onclick="sortFleetAZ()"></button>
+                    <button id="sortZA" onclick="sortFleetZA()"></button>
+                    <div class="grid"></div>
+                </div>
+
+            </div>
+        </main>
     
 </body>
+<script>
+    function addFleet(){
+    let regno=document.getElementById("regno").value.trim();
+    let category=document.getElementById("category").value.trim();
+    let drivername=document.getElementById("drivername").value.trim();
+    let isavailable=document.getElementById("isavailable").value.trim();
+    
+
+    }
+
+</script>
 </html>
