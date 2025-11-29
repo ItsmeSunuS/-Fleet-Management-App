@@ -21,6 +21,29 @@
         {
             background-color: aliceblue;
             padding: 12px;
+            width:300px;
+            margin-top: 12px;
+            border-radius: 5px;
+            border:ipx solid;
+
+        }
+        .formContainer{
+            background-color: antiquewhite;
+            padding: 26px;
+            width:300px;
+            border-radius:10px;
+            text-align: center;
+            box-shadow: 2 4px 12px;
+        }
+        button{
+
+            background-color: antiquewhite;
+            padding: 12px;
+            width:100%;
+            border-radius:10px;
+            text-align: center;
+            box-shadow: 2 4px 12px;
+            margin-top: 15px;
         }
     </style>
 </head>
@@ -31,9 +54,34 @@
 
         <input type="text" id="email" Placeholder="Enter your mail id">Enter your mail 
         <input type="password" id="pass" Placeholder="Enter your Password">Enter your Password
-        <button id="logbtn"  >LOGIN</button>
+        <button id="logbtn" onclick="login()" >LOGIN</button>
 
     </div>
+    <script>
+
+        function  login(){
+
+            let email=document.getElementById("email").value.trim();
+            let pass=document.getElementById("pass").value.trim();
+
+            let checkmail="admin@gmail.com";
+            let checkpass="admin1234";
+
+
+            if((email===checkmail) && (pass===checkpass))
+
+                {
+                    alert("Login success");
+                    location.href="admin.html";
+                }
+             else{
+                alert("Wrong email or Password");
+             }
+
+
+        }
+        
+    </script>
 
 </body>
 </html>
